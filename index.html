@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angel Abou Sekka — AI Engineer</title>
+<style>
+:root{--bg:#fafaf7;--card:#fff;--text:#16181d;--muted:#5d6370;--line:#e4e4de;--acc:#5b3df5;--accsoft:#eeeaff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1015;--card:#171923;--text:#eceef4;--muted:#9aa0b0;--line:#262a38;--acc:#9a86ff;--accsoft:#221e3d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1015;--card:#171923;--text:#eceef4;--muted:#9aa0b0;--line:#262a38;--acc:#9a86ff;--accsoft:#221e3d;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:72px 0 48px}
+.tag{display:inline-block;background:var(--accsoft);color:var(--acc);padding:4px 12px;border-radius:99px;font-size:13px;font-weight:600}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin:16px 0 8px;letter-spacing:-.02em}
+.role{font-size:1.2rem;color:var(--muted);margin:0 0 20px}
+.lead{max-width:680px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{padding:10px 18px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font-weight:600;font-size:15px}
+.btn.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn:hover{text-decoration:none;opacity:.9}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:1.5rem;margin:0 0 24px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:8px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.stat b{display:block;font-size:1.8rem;color:var(--acc)}
+.stat span{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column}
+.card.feat{grid-column:1/-1}
+.card h3{margin:0 0 8px;font-size:1.15rem}
+.card p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.card ul{margin:0 0 14px;padding-left:18px;color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{background:var(--accsoft);color:var(--acc);padding:2px 10px;border-radius:8px;font-size:12.5px;font-weight:600}
+.links{margin-top:12px;font-size:14px;font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.skills h4{margin:0 0 6px;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.skills p{margin:0}
+.row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.row h3{margin:0;font-size:1.1rem}.row span{color:var(--muted);font-size:14px}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="tag">Available for freelance projects</span>
+  <h1>Angel Abou Sekka</h1>
+  <p class="role">AI Engineer — Machine Learning, NLP &amp; LLM-Based Systems</p>
+  <p class="lead">Computer Engineering graduate (Artificial Intelligence Engineering) building RAG and LLM systems end to end: from fine-tuning embeddings and designing retrieval pipelines to shipping working APIs and apps. Based in Damascus, Syria.</p>
+  <div class="btns">
+    <a class="btn p" href="mailto:aabousika@gmail.com">Contact me</a>
+    <a class="btn" href="https://github.com/aabousika">GitHub</a>
+    <a class="btn" href="https://linkedin.com/in/angel-abousika">LinkedIn</a>
+  </div>
+</header>
+
+<section>
+  <h2>Headline results</h2>
+  <div class="stats">
+    <div class="stat"><b>45% → 96%</b><span>Hit Rate (CoRAG)</span></div>
+    <div class="stat"><b>3.3% → 56.4%</b><span>F1 score</span></div>
+    <div class="stat"><b>0% → 34%</b><span>Exact Match</span></div>
+    <div class="stat"><b>~37,000</b><span>vectors indexed in FAISS</span></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="card feat">
+      <h3>CoRAG — Complex Query Retrieval-Augmented Generation</h3>
+      <p>Graduation project. A modular RAG framework that answers complex, multi-step legal questions over Australian case data.</p>
+      <ul>
+        <li>8-stage retrieval pipeline: query decomposition, iterative retrieval, self-critique and gap analysis.</li>
+        <li>Fine-tuned an embedding model (msmarco-distilbert-base-v4) with Triplet Loss to improve retrieval quality.</li>
+        <li>Evaluated across five development iterations; deployed as an interactive Telegram bot.</li>
+      </ul>
+      <div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">FAISS</span><span class="chip">LLMs</span><span class="chip">Fine-Tuning</span><span class="chip">Telegram</span></div>
+      <div class="links"><a href="https://github.com/aabousika/CoRAG">View on GitHub →</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Telecom Data Warehouse — Syriatel vs. MTN</h3>
+      <p>Data engineering and data mining across two operators.</p>
+      <ul>
+        <li>PostgreSQL star schema (4 dimensions + 1 fact table).</li>
+        <li>Python ETL with currency unification and a weekly scheduler.</li>
+        <li>Decision Tree and KNN for churn risk and package recommendation; Chart.js dashboards.</li>
+      </ul>
+      <div class="chips"><span class="chip">PostgreSQL</span><span class="chip">ETL</span><span class="chip">scikit-learn</span><span class="chip">Chart.js</span></div>
+    </article>
+
+    <article class="card">
+      <h3>REPEC-AI — AI Travel Booking Platform</h3>
+      <p>Full-stack booking system for Syrian destinations with a conversational recommendation assistant.</p>
+      <ul>
+        <li>OpenAI API integration for personalized recommendations.</li>
+        <li>Flask + SQLAlchemy REST backend with OAuth authentication.</li>
+        <li>Cloud deployment configured on Google Cloud Platform.</li>
+      </ul>
+      <div class="chips"><span class="chip">Flask</span><span class="chip">SQLAlchemy</span><span class="chip">OpenAI API</span><span class="chip">OAuth</span><span class="chip">GCP</span></div>
+      <div class="links"><a href="https://github.com/aabousika/REPEC-AI">View on GitHub →</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Genetic Algorithm — Robot Path Planning</h3>
+      <p>Enhanced GA for autonomous navigation in static and dynamic environments, with collision avoidance and real-time re-planning.</p>
+      <ul>
+        <li>Multi-objective fitness balancing path efficiency and safety.</li>
+        <li>Simulated and evaluated with Python and Matplotlib.</li>
+      </ul>
+      <div class="chips"><span class="chip">Python</span><span class="chip">Optimization</span><span class="chip">Matplotlib</span></div>
+      <div class="links"><a href="https://github.com/aabousika/GA-Robot-Path-Planning">View on GitHub →</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Flask–React Full-Stack App</h3>
+      <p>CRUD application with a Flask API and a React frontend.</p>
+      <ul>
+        <li>REST communication with Axios; state managed with React Hooks.</li>
+      </ul>
+      <div class="chips"><span class="chip">Flask</span><span class="chip">React</span><span class="chip">REST</span></div>
+      <div class="links"><a href="https://github.com/aabousika/Flask-React-Full-Stack-App">View on GitHub →</a></div>
+    </article>
+
+    <article class="card">
+      <h3>Snake AI — Deep Q-Network Agent</h3>
+      <p>A reinforcement learning agent that teaches itself to play Snake from scratch.</p>
+      <ul>
+        <li>DQN agent trained through trial and reward, with no hand-coded strategy.</li>
+        <li>Built while studying deep learning and reinforcement learning fundamentals.</li>
+      </ul>
+      <div class="chips"><span class="chip">Python</span><span class="chip">Reinforcement Learning</span><span class="chip">DQN</span><span class="chip">Neural Networks</span></div>
+    </article>
+
+    <article class="card">
+      <h3>Secure Educational Platform</h3>
+      <p>A security-focused educational platform API: FastAPI on Clean Architecture, PostgreSQL (Neon) and a web frontend.</p>
+      <ul>
+        <li>JWT authentication, Argon2 password hashing and role-based access control (public student sign-up, restricted instructor accounts).</li>
+        <li>Student PII encrypted before storage with Fernet; audit logging of actions.</li>
+        <li>Digitally signed certificates using Ed25519, verifiable against a public key.</li>
+        <li>Layered design: domain, application, infrastructure and presentation.</li>
+      </ul>
+      <div class="chips"><span class="chip">FastAPI</span><span class="chip">SQLAlchemy 2</span><span class="chip">PostgreSQL</span><span class="chip">JWT</span><span class="chip">Cryptography</span><span class="chip">Clean Architecture</span></div>
+      <div class="links"><a href="https://github.com/aabousika/secure-educational-platform">View on GitHub →</a></div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>What I can build for you</h2>
+  <div class="grid">
+    <div class="card"><h3>RAG &amp; LLM applications</h3><p>Document Q&amp;A, legal or knowledge-base assistants, chatbots and Telegram bots, with retrieval tuned and measured.</p></div>
+    <div class="card"><h3>Backend APIs</h3><p>Secure FastAPI or Flask services with SQLAlchemy, PostgreSQL, JWT/OAuth authentication and role-based access.</p></div>
+    <div class="card"><h3>Data pipelines &amp; dashboards</h3><p>ETL, data warehouses and interactive dashboards that turn raw data into decisions.</p></div>
+    <div class="card"><h3>ML prototypes</h3><p>Classification, recommendation and optimization models, from experiment to working demo.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h4>AI / ML</h4><p>Machine Learning, Deep Learning, NLP, Neural Networks, Reinforcement Learning (DQN), scikit-learn, Decision Trees, KNN</p></div>
+    <div><h4>LLM &amp; RAG</h4><p>RAG pipelines, Query Decomposition, Iterative Retrieval, Embedding Fine-Tuning (Triplet Loss), FAISS, Prompt Engineering, OpenAI API</p></div>
+    <div><h4>Optimization</h4><p>Genetic Algorithms, multi-objective optimization, path planning</p></div>
+    <div><h4>Data Engineering</h4><p>Data Warehousing, Star Schema, ETL pipelines, Data Mining, Chart.js dashboards, task scheduling</p></div>
+    <div><h4>Architecture</h4><p>Clean Architecture, Strategy Pattern, REST API design, OAuth, JWT and Firebase authentication</p></div>
+    <div><h4>Security</h4><p>Role-based access control, Argon2 hashing, Fernet encryption of PII, Ed25519 digital signatures, audit logging</p></div>
+    <div><h4>Embedded</h4><p>Arduino, autonomous vehicle prototypes, control-system simulation</p></div>
+    <div><h4>Programming</h4><p>Python, C++, SQL</p></div>
+    <div><h4>Backend</h4><p>FastAPI, Flask, REST APIs, SQLAlchemy ORM, JWT / OAuth authentication</p></div>
+    <div><h4>Frontend</h4><p>React, JavaScript, HTML, CSS</p></div>
+    <div><h4>Databases</h4><p>PostgreSQL, SQLite, SQL Server, SQLAlchemy models and queries</p></div>
+    <div><h4>Tools &amp; Cloud</h4><p>Git, Linux, Google Cloud Platform, Neon (serverless Postgres), Telegram Bot API, Matplotlib</p></div>
+    <div><h4>Currently learning</h4><p>Mathematics for ML, advanced Deep Learning and LLM engineering</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience &amp; education</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="row"><h3>B.Eng. Computer Engineering (AI)</h3><span>2021 – 2026</span></div>
+      <p>Antioch Syrian Private University. Graduation project: CoRAG.</p>
+    </div>
+    <div class="card">
+      <div class="row"><h3>Training Program, MTN Syria</h3><span>3 months · Damascus</span></div>
+      <p>Backend systems, APIs and database-driven applications in an enterprise software development lifecycle.</p>
+    </div>
+    <div class="card">
+      <h3>Also built</h3>
+      <p>Neural networks from first principles (forward/backpropagation, optimization) and Arduino-based autonomous vehicle prototypes.</p>
+    </div>
+    <div class="card">
+      <h3>Languages</h3>
+      <p>Arabic (native) · English (professional) · French (professional)</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="row"><span>© 2026 Angel Abou Sekka</span><span><a href="mailto:aabousika@gmail.com">aabousika@gmail.com</a> · <a href="https://github.com/aabousika">GitHub</a> · <a href="https://linkedin.com/in/angel-abousika">LinkedIn</a></span></div>
+</footer>
+</div>
+</body>
+</html>
